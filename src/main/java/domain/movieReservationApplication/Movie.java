@@ -1,17 +1,21 @@
 package domain.movieReservationApplication;
 
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.List;
 
-public class Movie {
+public abstract class Movie {
     private String title;
     private Duration runningTime;
     private Money fee;
     private List<DiscountCondition> discountConditions;
 
-    private MovieType movieType;
-    private Money discountAmount;
-    private double discountPercent;
+    public Movie(String title, Duration runningTime, Money fee, DiscountCondition... discountConditions) {
+        this.title = title;
+        this.runningTime = runningTime;
+        this.fee = fee;
+        this.discountConditions = Arrays.asList(discountConditions);
+    }
 
     public Money calculateMovieFee(Screening screening) {
         if (isDiscountable(screening)) {
@@ -26,29 +30,9 @@ public class Movie {
                 .anyMatch(condition -> condition.isSatisfiedBy(screening));
     }
 
-    private Money calculateDiscountAmount() {
-        switch (movieType) {
-            case AMOUNT_DISCOUNT:
-                return calculateAmountDiscountAmount();
-            case PERCENT_DISCOUNT:
-                return calculatePercentDiscountAmount();
-            case NONE_DISCOUNT:
-                return calculateNoneDiscountAmount();
-        }
+    abstract protected Money calculateDiscountAmount();
 
-        throw new IllegalArgumentException();
+    protected Money getFee() {
+        return fee;
     }
-
-    private Money calculateNoneDiscountAmount() {
-        return Money.ZERO;
-    }
-
-    private Money calculatePercentDiscountAmount() {
-        return fee.times(discountPercent);
-    }
-
-    private Money calculateAmountDiscountAmount() {
-        return discountAmount;
-    }
-
 }
