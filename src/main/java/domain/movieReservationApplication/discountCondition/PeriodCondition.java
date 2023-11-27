@@ -1,5 +1,7 @@
-package domain.movieReservationApplication;
+package domain.movieReservationApplication.discountCondition;
 
+import domain.movieReservationApplication.DiscountCondition;
+import domain.movieReservationApplication.Screening;
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 

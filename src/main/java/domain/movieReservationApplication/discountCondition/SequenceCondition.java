@@ -1,6 +1,9 @@
-package domain.movieReservationApplication;
+package domain.movieReservationApplication.discountCondition;
 
-public class SequenceCondition implements DiscountCondition{
+import domain.movieReservationApplication.DiscountCondition;
+import domain.movieReservationApplication.Screening;
+
+public class SequenceCondition implements DiscountCondition {
     private int sequence;
 
     public SequenceCondition(int sequence) {
