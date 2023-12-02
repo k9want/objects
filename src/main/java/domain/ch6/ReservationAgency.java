@@ -1,7 +1,7 @@
-package domain.movieReservationApplication;
+package domain.ch6;
 
-import domain.movieReservationApplication.discountCondition.SequenceCondition;
-import domain.movieReservationApplication.discountPolicy.AmountDiscountPolicy;
+import domain.ch6.discountCondition.SequenceCondition;
+import domain.ch6.discountPolicy.AmountDiscountPolicy;
 import java.math.BigDecimal;
 import java.time.Duration;
 import java.time.LocalDateTime;

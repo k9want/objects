@@ -1,8 +1,8 @@
-package domain.movieReservationApplication.discountPolicy;
+package domain.ch6.discountPolicy;
 
-import domain.movieReservationApplication.DiscountCondition;
-import domain.movieReservationApplication.Money;
-import domain.movieReservationApplication.Screening;
+import domain.ch6.DiscountCondition;
+import domain.ch6.Money;
+import domain.ch6.Screening;
 
 public class PercentDiscountPolicy extends DefaultDiscountPolicy {
     private double percent;

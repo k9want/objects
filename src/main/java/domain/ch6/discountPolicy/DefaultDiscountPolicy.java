@@ -1,9 +1,9 @@
-package domain.movieReservationApplication.discountPolicy;
+package domain.ch6.discountPolicy;
 
-import domain.movieReservationApplication.DiscountCondition;
-import domain.movieReservationApplication.DiscountPolicy;
-import domain.movieReservationApplication.Money;
-import domain.movieReservationApplication.Screening;
+import domain.ch6.DiscountCondition;
+import domain.ch6.DiscountPolicy;
+import domain.ch6.Money;
+import domain.ch6.Screening;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

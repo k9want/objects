@@ -1,4 +1,4 @@
-package domain.movieReservationApplication;
+package domain.ch6;
 
 public class Reservation {
     private Customer customer;

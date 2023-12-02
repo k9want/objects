@@ -1,4 +1,4 @@
-package domain.movieReservationApplication;
+package domain.ch6;
 
 import java.time.LocalDateTime;
 
